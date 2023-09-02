@@ -16,6 +16,81 @@ export function compareString(str1 = '', str2 = '') {
 }
 
 /**
+ * @description 获取 `yyyy-MM-dd HH:mm:ss` 格式的日期时间字符串
+ * @param {string|null|number}  [time] 自定义时间
+ * - 若为时间戳数值或日期时间字符串，则解析为对应的日期时间
+ * - 若字符串只包含日期，将会根据当前时区设置一个时间
+ * @param {'all'|'date'|'time'} [type]
+ */
+export function getCommonDateTime(time = null, type = 'all') {
+
+  let date = (time === null ? new Date() : new Date(time));
+  let t = {
+    y: date.getFullYear(),
+    m: date.getMonth() + 1,
+    d: date.getDate(),
+    h: date.getHours(),
+    i: date.getMinutes(),
+    s: date.getSeconds(),
+  };
+
+  if (isNaN(t.y)) {
+    console.error('获取失败：参数格式错误');
+    return '';
+  }
+
+  for (let k in t) {
+    t[k] = String(t[k]).padStart(2, '0');
+  }
+
+  switch (type) {
+    case 'all':
+      return `${t.y}-${t.m}-${t.d} ${t.h}:${t.i}:${t.s}`;
+    case 'date':
+      return `${t.y}-${t.m}-${t.d}`
+    case 'time':
+      return `${t.h}:${t.i}:${t.s}`
+    default:
+      console.error('获取失败：类型错误');
+      return ``;
+  }
+
+}
+
+/**
+ * @description 通过路径获取对象属性值
+ * @param {object} obj    操作的对象
+ * @param {string} [path] 属性访问路径
+ * @param {string} [sep]  路径分隔符，默认为“.”
+ */
+export function getObjectValue(obj, path = '', sep = '.') {
+
+  if (!isObject(obj)) {
+    console.error('获取属性失败：参数 obj 不是对象');
+    return;
+  }
+
+  if (typeof path !== 'string') {
+    console.error('获取属性失败：参数 path 不是字符串');
+    return;
+  }
+
+  if (typeof sep !== 'string') {
+    console.error('获取属性失败：参数 sep 不是字符串');
+    return;
+  }
+
+  if (path === '') {
+    return obj;
+  }
+
+  return path.split(sep).reduce((a, b) => {
+    return (isArray(a) || isObject(a)) ? a[b] : undefined;
+  }, obj);
+
+}
+
+/**
  * @description 获取多个对象中的某个属性
  * - 将会对比多个对象中的属性
  * - 若属性值都相同，则返回对应的值
@@ -73,6 +148,11 @@ export function getObjectsAttr(options = {}) {
     return null;
   }
 
+}
+
+/** 检测参数是否为数组 */
+export function isArray(value) {
+  return (Object.prototype.toString.call(value) === '[object Array]');
 }
 
 /** 检测参数是否为对象 */
