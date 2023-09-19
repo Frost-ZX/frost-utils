@@ -22,3 +22,4 @@
 - `isElement` - 检测参数是否为 `HTMLElement`
 - `observeElementVisible` - 检测元素显示隐藏
 - `rectCollisionCheck` - 检测两个矩形元素是否重叠
+- `selectFileDataURL` - 选择单个文件，获取 Base64
