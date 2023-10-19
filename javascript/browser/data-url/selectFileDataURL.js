@@ -7,6 +7,16 @@
  * @property {boolean}          success
  */
 
+const M = {
+  '': '',
+  CANCELLED: 'CANCELLED',
+  INVALID_FORMAT: 'INVALID_FORMAT',
+  NO_FILE: 'NO_FILE',
+  READER_ERROR: 'READER_ERROR',
+  SIZE_EXCEEDED: 'SIZE_EXCEEDED',
+  SUCCESS: 'SUCCESS',
+};
+
 /**
  * @description 选择单个文件，获取 Base64
  * @param   {string[]} mimeList MIME 类型列表
@@ -16,17 +26,6 @@
  * @returns {Promise<Returns>}
  */
 function selectFileDataURL(mimeList = [], maxSize = 0) {
-
-  const M = {
-    '': '',
-    CANCELLED: 'CANCELLED',
-    INVALID_FORMAT: 'INVALID_FORMAT',
-    NO_FILE: 'NO_FILE',
-    READER_ERROR: 'READER_ERROR',
-    SIZE_EXCEEDED: 'SIZE_EXCEEDED',
-    SUCCESS: 'SUCCESS',
-  };
-
   return new Promise((resolve) => {
 
     /** @type {Returns} */
@@ -116,7 +115,6 @@ function selectFileDataURL(mimeList = [], maxSize = 0) {
     input.click();
 
   });
-
 }
 
 export default selectFileDataURL;

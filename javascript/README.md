@@ -4,7 +4,6 @@
 
 ### 通用函数
 
-- `common/color/getHEXColor` - 获取随机的十六进制颜色值
 - `common/compareString` - 使用 `localeCompare` 对比字符串
 - `common/getCommonDateTime` - 获取 `yyyy-MM-dd HH:mm:ss` 格式的日期时间字符串
 - `common/getObjectValue` - 通过路径获取对象属性值
@@ -14,11 +13,14 @@
 - `common/sleep` - 等待一段时间
 - `common/toBroadcastAddress` - 将 IP 地址转换为广播地址
 
+- `common/color/getHEXColor` - 获取随机的十六进制颜色值
+
 ### 浏览器专用
+
+- `browser/isElement` - 检测参数是否为 `HTMLElement`
+- `browser/observeElementVisible` - 检测元素显示隐藏
+- `browser/rectCollisionCheck` - 检测两个矩形元素是否重叠
 
 - `browser/data-url/blobToDataURL` - 转换二进制（Blob）为 Base64
 - `browser/data-url/requestDataURL` - 请求获取文件，转换为 Base64
 - `browser/data-url/selectFileDataURL` - 选择单个文件，获取 Base64
-- `browser/isElement` - 检测参数是否为 `HTMLElement`
-- `browser/observeElementVisible` - 检测元素显示隐藏
-- `browser/rectCollisionCheck` - 检测两个矩形元素是否重叠
