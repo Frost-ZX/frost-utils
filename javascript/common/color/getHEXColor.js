@@ -12,3 +12,5 @@ function getHEXColor() {
   }
   return chars.join('');
 }
+
+export default getHEXColor;

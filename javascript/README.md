@@ -4,22 +4,19 @@
 
 ### 通用函数
 
-- `compareString` - 使用 `localeCompare` 对比字符串
-- `getCommonDateTime` - 获取 `yyyy-MM-dd HH:mm:ss` 格式的日期时间字符串
-- `getObjectValue` - 通过路径获取对象属性值
-- `getObjectsAttr` - 获取多个对象中的某个属性
-- `isArray` - 检测参数是否为数组
-- `isObject` - 检测参数是否为对象
-- `sleep` - 等待一段时间
-- `toBroadcastAddress` - 将 IP 地址转换为广播地址
-
-### 颜色处理（通用）
-
-- `getHEXColor` - 获取随机的十六进制颜色值
+- `common/color/getHEXColor` - 获取随机的十六进制颜色值
+- `common/compareString` - 使用 `localeCompare` 对比字符串
+- `common/getCommonDateTime` - 获取 `yyyy-MM-dd HH:mm:ss` 格式的日期时间字符串
+- `common/getObjectValue` - 通过路径获取对象属性值
+- `common/getObjectsAttr` - 获取多个对象中的某个属性
+- `common/isArray` - 检测参数是否为数组
+- `common/isObject` - 检测参数是否为对象
+- `common/sleep` - 等待一段时间
+- `common/toBroadcastAddress` - 将 IP 地址转换为广播地址
 
 ### 浏览器专用
 
-- `isElement` - 检测参数是否为 `HTMLElement`
-- `observeElementVisible` - 检测元素显示隐藏
-- `rectCollisionCheck` - 检测两个矩形元素是否重叠
-- `selectFileDataURL` - 选择单个文件，获取 Base64
+- `browser/data-url/selectFileDataURL` - 选择单个文件，获取 Base64
+- `browser/isElement` - 检测参数是否为 `HTMLElement`
+- `browser/observeElementVisible` - 检测元素显示隐藏
+- `browser/rectCollisionCheck` - 检测两个矩形元素是否重叠
