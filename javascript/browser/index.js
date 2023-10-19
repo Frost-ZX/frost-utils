@@ -1,3 +1,5 @@
+export { default as blobToDataURL } from './data-url/blobToDataURL';
+export { default as requestDataURL } from './data-url/requestDataURL';
 export { default as selectFileDataURL } from './data-url/selectFileDataURL';
 
 export { default as isElement } from './isElement';

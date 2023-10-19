@@ -16,6 +16,8 @@
 
 ### 浏览器专用
 
+- `browser/data-url/blobToDataURL` - 转换二进制（Blob）为 Base64
+- `browser/data-url/requestDataURL` - 请求获取文件，转换为 Base64
 - `browser/data-url/selectFileDataURL` - 选择单个文件，获取 Base64
 - `browser/isElement` - 检测参数是否为 `HTMLElement`
 - `browser/observeElementVisible` - 检测元素显示隐藏
