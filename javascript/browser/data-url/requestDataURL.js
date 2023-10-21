@@ -1,5 +1,5 @@
-import blobToDataURL from './blobToDataURL';
-import isObject from '../../common/isObject';
+import blobToDataURL from './blobToDataURL.js';
+import isObject from '../../common/isObject.js';
 
 /**
  * @typedef  {object} Returns

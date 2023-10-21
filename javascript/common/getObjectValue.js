@@ -1,5 +1,5 @@
-import isArray from './isArray';
-import isObject from './isObject';
+import isArray from './isArray.js';
+import isObject from './isObject.js';
 
 /**
  * @description 通过路径获取对象属性值

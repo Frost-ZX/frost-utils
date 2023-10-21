@@ -1,4 +1,4 @@
-import isElement from './isElement';
+import isElement from './isElement.js';
 
 /**
  * @description 检测两个矩形元素是否重叠
