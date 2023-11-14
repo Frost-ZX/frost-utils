@@ -1,16 +1,7 @@
 import isArray from './isArray.js';
 import isObject from './isObject.js';
 
-/**
- * @description 合并对象属性
- * - 将会修改目标对象，添加来自来源对象中的属性
- * - 若来源属性为数组，将会直接替换
- * - 若目标属性为对象，但来源属性为 `null`，则跳过
- * @template T1, T2
- * @param   {T1} obj 目标对象
- * @param   {T2} src 来源对象
- * @returns {T1 & T2}
- */
+/** @type { import('./mergeObject')['default'] } */
 function mergeObject(obj, src) {
   try {
 

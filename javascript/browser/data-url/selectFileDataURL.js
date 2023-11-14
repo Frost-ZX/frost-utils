@@ -1,12 +1,4 @@
-/**
- * @typedef  {object} Returns
- * @property {string}           dataURL
- * @property {Error | null}     error
- * @property {File | null}      file
- * @property {keyof (typeof M)} message
- * @property {boolean}          success
- */
-
+/** @type { import('./selectFileDataURL').Messages } */
 const M = {
   '': '',
   CANCELLED: 'CANCELLED',
@@ -17,18 +9,11 @@ const M = {
   SUCCESS: 'SUCCESS',
 };
 
-/**
- * @description 选择单个文件，获取 Base64
- * @param   {string[]} mimeList MIME 类型列表
- * - 用于检测文件格式，若为空，则允许所有格式
- * - 例：`['application/json', 'image/jpeg']`
- * @param   {number}   maxSize  文件大小最大值（单位：B）
- * @returns {Promise<Returns>}
- */
+/** @type { import('./selectFileDataURL')['default'] } */
 function selectFileDataURL(mimeList = [], maxSize = 0) {
   return new Promise((resolve) => {
 
-    /** @type {Returns} */
+    /** @type { import('./selectFileDataURL').Returns } */
     let result = {
       dataURL: '',
       error: null,

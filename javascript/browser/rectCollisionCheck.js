@@ -1,14 +1,9 @@
 import isElement from './isElement.js';
 
-/**
- * @description 检测两个矩形元素是否重叠
- * @param   {Element} elementA 检测的 DOM 元素
- * @param   {Element} elementB 检测的 DOM 元素
- * @param   {boolean} aside    是否包含边缘重叠，默认 true
- * @returns `{ error: 是否检测失败, hit: 是否重叠 }`
- */
+/** @type { import('./rectCollisionCheck')['default'] } */
 function rectCollisionCheck(elementA, elementB, aside = false) {
 
+  /** @type { import('./rectCollisionCheck').Returns } */
   let result = {
     error: false,
     hit: false,

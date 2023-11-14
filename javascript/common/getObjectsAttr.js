@@ -1,34 +1,19 @@
-/** @typedef {Record<string, boolean|number|string>[]} Objects */
+import isArray from './isArray';
 
-/**
- * @typedef  Options
- * @property {Objects} objects   简单对象列表
- * @property {string}  propName  需要获取的属性名
- * @property {boolean} skipUndef 忽略 `undefined`
- */
-
-/**
- * @description 获取多个对象中的某个属性
- * - 将会对比多个对象中的属性
- * - 若属性值都相同，则返回对应的值
- * - 若属性值都为 `undefined`，则返回 `null`
- * - 若存在不同的属性值，则返回 `null`
- * - 若对象列表为空，则返回 `null`
- * @param {Options} options
- */
+/** @type { import('./getObjectsAttr')['default'] } */
 function getObjectsAttr(options) {
   try {
 
     let { objects = [], propName = '', skipUndef = false } = options;
 
-    if (!Array.isArray(objects) || objects.length === 0) {
+    if (!isArray(objects) || objects.length === 0) {
       return null;
     }
 
-    /** @type {Objects[number][string] | undefined} */
+    /** @type {typeof options['objects'][number][string] | undefined} */
     let value0 = undefined;
 
-    /** @type {Objects[number][string] | undefined} */
+    /** @type {typeof options['objects'][number][string] | undefined} */
     let value1 = undefined;
 
     for (let i = 0; i < objects.length; i++) {

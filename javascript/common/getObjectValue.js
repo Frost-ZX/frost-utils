@@ -1,12 +1,7 @@
 import isArray from './isArray.js';
 import isObject from './isObject.js';
 
-/**
- * @description 通过路径获取对象属性值
- * @param {object} obj    操作的对象
- * @param {string} [path] 属性访问路径
- * @param {string} [sep]  路径分隔符，默认为“.”
- */
+/** @type { import('./getObjectValue')['default'] } */
 function getObjectValue(obj, path = '', sep = '.') {
 
   if (!isObject(obj)) {

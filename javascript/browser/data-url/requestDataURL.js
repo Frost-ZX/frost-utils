@@ -1,23 +1,10 @@
 import blobToDataURL from './blobToDataURL.js';
 import isObject from '../../common/isObject.js';
 
-/**
- * @typedef  {object} Returns
- * @property {string}       dataURL
- * @property {Error | null} error
- * @property {boolean}      success
- * @property {boolean}      timeout
- */
-
-/**
- * @description 请求获取文件，转换为 Base64
- * @param {string}      fileURL   文件请求地址
- * @param {number}      [timeout] 请求超时毫秒数
- * @param {RequestInit} [init]    传递到 `fetch()`
- */
+/** @type { import('./requestDataURL')['default'] } */
 function requestDataURL(fileURL, timeout = 0, init = {}) {
 
-  /** @type {Returns} */
+  /** @type { import('./requestDataURL').Returns } */
   let result = {
     error: null,
     dataURL: '',

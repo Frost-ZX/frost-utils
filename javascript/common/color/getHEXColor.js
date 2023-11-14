@@ -1,4 +1,4 @@
-/** 获取随机的十六进制颜色值 */
+/** @type { import('./getHEXColor')['default'] } */
 function getHEXColor() {
   let list = [
     '0', '1', '2', '3', '4', '5', '6', '7',

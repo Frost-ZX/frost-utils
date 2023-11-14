@@ -1,8 +1,4 @@
-/**
- * @description 转换二进制（Blob）为 Base64
- * @param   {Blob} blob
- * @returns {Promise<string>} `resolve(string)` `reject(Error)`
- */
+/** @type { import('./blobToDataURL')['default'] } */
 function blobToDataURL(blob) {
   return new Promise((resolve, reject) => {
     try {

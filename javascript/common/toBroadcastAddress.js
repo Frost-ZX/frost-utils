@@ -1,8 +1,4 @@
-/**
- * @description 将 IP 地址转换为广播地址
- * @param {string} address 需要处理的 IP 地址
- * @param {string} netmask 对应的子网掩码
- */
+/** @type { import('./toBroadcastAddress')['default'] } */
 function toBroadcastAddress(address = '', netmask = '') {
 
   let regExpBase = '([01]?[0-9][0-9]?|2[0-4][0-9]|25[0-5])';

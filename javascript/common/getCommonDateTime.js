@@ -1,10 +1,4 @@
-/**
- * @description 获取 `yyyy-MM-dd HH:mm:ss` 格式的日期时间字符串
- * @param {string|null|number}  [time] 自定义时间
- * - 若为时间戳数值或日期时间字符串，则解析为对应的日期时间
- * - 若字符串只包含日期，将会根据当前时区设置一个时间
- * @param {'all'|'date'|'time'} [type]
- */
+/** @type { import('./getCommonDateTime')['default'] } */
 function getCommonDateTime(time = null, type = 'all') {
 
   let date = (time === null ? new Date() : new Date(time));
