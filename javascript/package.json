@@ -15,7 +15,9 @@
     "url": "https://github.com/Frost-ZX/frost-utils",
     "directory": "javascript"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "node ./tests/index.js"
+  },
   "type": "module",
   "devDependencies": {
     "@types/jest": "^29.5.8",
