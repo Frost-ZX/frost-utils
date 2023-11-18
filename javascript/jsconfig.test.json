@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "composite": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "tests/**/*.js",
+  ]
+}
