@@ -11,6 +11,7 @@
 - `common/isArray` - 检测参数是否为数组
 - `common/isObject` - 检测参数是否为对象
 - `common/mergeObject` - 合并对象属性
+- `common/mergeObjects` - 对比多个对象的数据，合并为一个对象
 - `common/sleep` - 等待一段时间
 - `common/toBroadcastAddress` - 将 IP 地址转换为广播地址
 

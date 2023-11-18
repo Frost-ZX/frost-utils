@@ -5,6 +5,7 @@ export type { default as getObjectsAttr } from './getObjectsAttr.js';
 export type { default as isArray } from './isArray.js';
 export type { default as isObject } from './isObject.js';
 export type { default as mergeObject } from './mergeObject.js';
+export type { default as mergeObjects } from './mergeObjects.js';
 export type { default as sleep } from './sleep.js';
 export type { default as toBroadcastAddress } from './toBroadcastAddress.js';
 
