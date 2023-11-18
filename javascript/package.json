@@ -16,5 +16,9 @@
     "directory": "javascript"
   },
   "scripts": {},
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0"
+  }
 }
