@@ -1,4 +1,5 @@
 export { default as isElement } from './isElement.js';
+export { default as isHTMLElement } from './isHTMLElement.js';
 export { default as observeElementVisible } from './observeElementVisible.js';
 export { default as rectCollisionCheck } from './rectCollisionCheck.js';
 

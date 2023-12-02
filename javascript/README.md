@@ -16,10 +16,12 @@
 - `common/toBroadcastAddress` - 将 IP 地址转换为广播地址
 
 - `common/color/getHEXColor` - 获取随机的十六进制颜色值
+- `common/color/getRGBColor` - 获取随机的 RGB 颜色值
 
 ### 浏览器专用
 
-- `browser/isElement` - 检测参数是否为 `HTMLElement`
+- `browser/isElement` - 检测参数是否为 `Element`
+- `browser/isHTMLElement` - 检测参数是否为 `HTMLElement`
 - `browser/observeElementVisible` - 检测元素显示隐藏
 - `browser/rectCollisionCheck` - 检测两个矩形元素是否重叠
 

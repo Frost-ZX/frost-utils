@@ -10,3 +10,4 @@ export { default as sleep } from './sleep.js';
 export { default as toBroadcastAddress } from './toBroadcastAddress.js';
 
 export { default as getHEXColor } from './color/getHEXColor.js';
+export { default as getRGBColor } from './color/getRGBColor.js';

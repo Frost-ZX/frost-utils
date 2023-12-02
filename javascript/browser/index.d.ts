@@ -1,4 +1,5 @@
 export type { default as isElement } from './isElement.js';
+export type { default as isHTMLElement } from './isHTMLElement.js';
 export type { default as observeElementVisible } from './observeElementVisible.js';
 export type { default as rectCollisionCheck } from './rectCollisionCheck.js';
 
