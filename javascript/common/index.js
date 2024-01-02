@@ -6,6 +6,7 @@ export { default as isArray } from './isArray.js';
 export { default as isObject } from './isObject.js';
 export { default as mergeObject } from './mergeObject.js';
 export { default as mergeObjects } from './mergeObjects.js';
+export { default as rectCollisionCheck } from './rectCollisionCheck.js';
 export { default as sleep } from './sleep.js';
 export { default as toBroadcastAddress } from './toBroadcastAddress.js';
 
