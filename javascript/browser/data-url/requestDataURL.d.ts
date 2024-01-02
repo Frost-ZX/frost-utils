@@ -13,8 +13,6 @@ declare type Returns = {
  */
 declare function requestDataURL(fileURL: string, timeout?: number, init?: RequestInit): Promise<Returns>;
 
-export type {
-  Returns,
-};
+export type { Returns };
 
 export default requestDataURL;

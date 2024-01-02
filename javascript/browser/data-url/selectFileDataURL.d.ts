@@ -25,9 +25,6 @@ declare type Returns = {
  */
 declare function selectFileDataURL(mimeList?: string[], maxSize?: number): Promise<Returns>;
 
-export type {
-  Messages,
-  Returns,
-};
+export type { Messages, Returns };
 
 export default selectFileDataURL;

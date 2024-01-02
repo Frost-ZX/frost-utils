@@ -18,8 +18,6 @@ declare type Returns<T> = {
  */
 declare function mergeObjects<T>(objects: T[], skipKeys?: string[]): Returns<T>;
 
-export type {
-  Returns,
-};
+export type { Returns };
 
 export default mergeObjects;
