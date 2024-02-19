@@ -1,4 +1,5 @@
 import isArray from './isArray';
+import isObject from './isObject';
 
 /** @typedef { import('./mergeObjects')['default'] } F */
 /** @typedef { import('./mergeObjects').Returns<{}> } R */
@@ -13,8 +14,16 @@ function mergeObjects(objects, skipKeys = []) {
     result: {},
   };
 
-  if (!isArray(objects)) {
-    data.error = new Error('处理失败：参数错误');
+  if (isArray(objects)) {
+    for (let i = 0; i < objects.length; i++) {
+      if (!isObject(objects[i])) {
+        data.error = new TypeError('处理失败：部分元素不是对象');
+        data.result = null;
+        return data;
+      }
+    }
+  } else {
+    data.error = new TypeError('处理失败：参数类型错误');
     data.result = null;
     return data;
   }

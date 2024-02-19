@@ -5,10 +5,27 @@ import isObject from './isObject.js';
 function mergeObject(obj, src) {
   try {
 
+    if (typeof obj === 'undefined' || obj === null) {
+      obj = {};
+    }
+
+    if (typeof src === 'undefined' || src === null) {
+      src = {};
+    }
+
+    if (!isObject(obj) || !isObject(src)) {
+      throw new TypeError('参数类型错误');
+    }
+
     (function fn(target, source) {
       for (let key in source) {
 
         let srcValue = source[key];
+
+        // 跳过 `undefined`
+        if (typeof srcValue === 'undefined') {
+          continue;
+        }
 
         // 递归处理对象
         if (isObject(srcValue)) {
@@ -39,7 +56,7 @@ function mergeObject(obj, src) {
       }
     })(obj, src);
 
-    return (obj || {});
+    return obj;
 
   } catch (error) {
     console.error('合并失败：');
