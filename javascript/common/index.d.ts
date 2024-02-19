@@ -1,4 +1,5 @@
 export type { default as compareString } from './compareString.js';
+export type { default as defaultValue } from './defaultValue.js';
 export type { default as getCommonDateTime } from './getCommonDateTime.js';
 export type { default as getObjectValue } from './getObjectValue.js';
 export type { default as getObjectsAttr } from './getObjectsAttr.js';
