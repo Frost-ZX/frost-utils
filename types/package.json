@@ -1,0 +1,21 @@
+{
+  "name": "@frost-utils/types",
+  "version": "0.1.0",
+  "description": "A TypeScript declaration file collections.",
+  "keywords": [
+    "declaration",
+    "types",
+    "typescript"
+  ],
+  "homepage": "https://github.com/Frost-ZX/frost-utils",
+  "license": "MIT",
+  "author": "Frost-ZX",
+  "main": "",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frost-ZX/frost-utils",
+    "directory": "types"
+  },
+  "scripts": {}
+}
