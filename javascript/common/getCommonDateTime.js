@@ -1,3 +1,5 @@
+const prefix = '[getCommonDateTime]';
+
 /** @type { import('./getCommonDateTime')['default'] } */
 function getCommonDateTime(time = null, type = 'all') {
 
@@ -12,7 +14,7 @@ function getCommonDateTime(time = null, type = 'all') {
   };
 
   if (isNaN(t.y)) {
-    console.error('获取失败：参数格式错误');
+    console.error(prefix, '参数 time 错误');
     return '';
   }
 
@@ -28,7 +30,7 @@ function getCommonDateTime(time = null, type = 'all') {
     case 'time':
       return `${t.h}:${t.i}:${t.s}`
     default:
-      console.error('获取失败：类型错误');
+      console.error(prefix, '参数 type 错误');
       return ``;
   }
 

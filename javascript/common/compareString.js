@@ -1,3 +1,5 @@
+const prefix = '[compareString]';
+
 /** @type { import('./compareString')['default'] } */
 function compareString(str1 = '', str2 = '') {
   if (typeof str1 === 'string' && typeof str2 === 'string') {
@@ -6,7 +8,7 @@ function compareString(str1 = '', str2 = '') {
       numeric: true,
     });
   } else {
-    console.error('对比失败：参数不是字符串');
+    console.error(prefix, '参数为空或不是字符串');
     return 0;
   }
 }

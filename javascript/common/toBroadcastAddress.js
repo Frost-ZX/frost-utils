@@ -1,3 +1,5 @@
+const prefix = '[toBroadcastAddress]';
+
 /** @type { import('./toBroadcastAddress')['default'] } */
 function toBroadcastAddress(address = '', netmask = '') {
 
@@ -38,12 +40,12 @@ function toBroadcastAddress(address = '', netmask = '') {
   };
 
   if (typeof address !== 'string' || typeof netmask !== 'string') {
-    console.error('转换失败：参数数据类型错误');
+    console.error(prefix, '转换失败：参数数据类型错误');
     return '';
   }
 
   if (!regExpFull.test(address) || !regExpFull.test(netmask)) {
-    console.error('转换失败：参数格式错误');
+    console.error(prefix, '转换失败：参数格式错误');
     return '';
   }
 

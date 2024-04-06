@@ -1,5 +1,7 @@
 import isArray from './isArray';
 
+const prefix = '[getObjectsAttr]';
+
 /** @type { import('./getObjectsAttr')['default'] } */
 function getObjectsAttr(options) {
   try {
@@ -35,7 +37,7 @@ function getObjectsAttr(options) {
     return (typeof value0 === 'undefined' ? null : value0);
 
   } catch (error) {
-    console.error('获取对象属性失败：');
+    console.error(prefix, '获取失败：');
     console.error(error);
     return null;
   }

@@ -1,5 +1,7 @@
 import isObject from './isObject';
 
+const prefix = '[rectCollisionCheck]';
+
 /** @type { import('./rectCollisionCheck')['default'] } */
 function rectCollisionCheck(rectA, rectB, aside = false) {
 
@@ -44,7 +46,7 @@ function rectCollisionCheck(rectA, rectB, aside = false) {
     return result;
 
   } catch (error) {
-    console.error('检测失败：');
+    console.error(prefix, '检测失败：');
     console.error(error);
     result.error = true;
     return result;

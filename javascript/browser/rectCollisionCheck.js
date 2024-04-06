@@ -1,5 +1,7 @@
 import isElement from './isElement.js';
 
+const prefix = '[rectCollisionCheck]';
+
 /** @type { import('./rectCollisionCheck')['default'] } */
 function rectCollisionCheck(elementA, elementB, aside = false) {
 
@@ -10,7 +12,7 @@ function rectCollisionCheck(elementA, elementB, aside = false) {
   };
 
   if (!(isElement(elementA) && isElement(elementB))) {
-    console.error('检测失败：缺少参数');
+    console.error(prefix, '缺少参数');
     result.error = true;
     return result;
   }

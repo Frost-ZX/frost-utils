@@ -1,6 +1,8 @@
 import isArray from './isArray.js';
 import isObject from './isObject.js';
 
+const prefix = '[mergeObject]';
+
 /** @type { import('./mergeObject')['default'] } */
 function mergeObject(obj, src) {
   try {
@@ -59,7 +61,7 @@ function mergeObject(obj, src) {
     return obj;
 
   } catch (error) {
-    console.error('合并失败：');
+    console.error(prefix, '操作失败：');
     console.error(error);
     return {};
   }
