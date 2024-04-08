@@ -1,5 +1,5 @@
-import isArray from './isArray';
-import isObject from './isObject';
+import isArray from './isArray.js';
+import isObject from './isObject.js';
 
 /** @typedef { import('./mergeObjects')['default'] } F */
 /** @typedef { import('./mergeObjects').Returns<{}> } R */
