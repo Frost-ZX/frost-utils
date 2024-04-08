@@ -1,4 +1,6 @@
 export type { default as compareString } from './compareString.d.ts';
+export type { default as dataPagination } from './dataPagination.d.ts';
+export type { default as dataToRanks } from './dataToRanks.d.ts';
 export type { default as defaultValue } from './defaultValue.d.ts';
 export type { default as getCommonDateTime } from './getCommonDateTime.d.ts';
 export type { default as getObjectValue } from './getObjectValue.d.ts';
