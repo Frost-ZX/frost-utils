@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.1.3] - 2024-04-10
+
+### Added
+
+- 添加 `dataPagination` `dataToRanks` `defaultValue` `getRGBColor` `isHTMLElement` `rectCollisionCheck` 函数。
+- 完善 `getHEXColor` 函数，支持 Alpha 通道。
+
+### Fixed
+
+- 优化 `mergeObject` `mergeObjects` 函数，检测参数数据类型。
+
 ## [2.1.2] - 2023-11-18
 
 ### Added
