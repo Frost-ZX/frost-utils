@@ -8,6 +8,7 @@
 - `common/dataPagination` - 分页处理
 - `common/dataToRanks` - 将数据拆分为行列
 - `common/defaultValue` - 传入值为 `undefined` 或 `null` 时返回默认值
+- `common/findNearestNumberInArray` - 查找数组中与指定值最相近的数
 - `common/getCommonDateTime` - 获取 `yyyy-MM-dd HH:mm:ss` 格式的日期时间字符串
 - `common/getObjectValue` - 通过路径获取对象属性值
 - `common/getObjectsAttr` - 获取多个对象中的某个属性
